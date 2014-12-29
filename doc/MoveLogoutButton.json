@@ -2,7 +2,7 @@
     "name": "MoveLogoutButton",
     "version": "4.0.1",
     "framework": [
-        "3.0.x"
+        "4.0.x"
     ],
     "vendor": {
         "name":  "Perl-Services.de",

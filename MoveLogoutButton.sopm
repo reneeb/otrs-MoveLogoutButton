@@ -3,7 +3,7 @@
     <!-- GENERATED WITH OTRS::OPM::Maker::Command::sopm (1.28) -->
     <Name>MoveLogoutButton</Name>
     <Version>4.0.1</Version>
-    <Framework>3.0.x</Framework>
+    <Framework>4.0.x</Framework>
     <Vendor>Perl-Services.de</Vendor>
     <URL>http://www.perl-services.de</URL>
     <Description Lang="de">Verschiebe den Logout-Button nach rechts</Description>
