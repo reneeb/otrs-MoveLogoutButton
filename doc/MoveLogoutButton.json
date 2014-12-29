@@ -1,0 +1,16 @@
+{
+    "name": "MoveLogoutButton",
+    "version": "4.0.1",
+    "framework": [
+        "3.0.x"
+    ],
+    "vendor": {
+        "name":  "Perl-Services.de",
+        "url": "http://www.perl-services.de"
+    },
+    "license": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007",
+    "description" : {
+        "en": "Move logout button to the right",
+        "de": "Verschiebe den Logout-Button nach rechts"
+    }
+}

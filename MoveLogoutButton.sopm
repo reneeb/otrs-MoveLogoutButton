@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.0">
+    <!-- GENERATED WITH OTRS::OPM::Maker::Command::sopm (1.28) -->
+    <Name>MoveLogoutButton</Name>
+    <Version>4.0.1</Version>
+    <Framework>3.0.x</Framework>
+    <Vendor>Perl-Services.de</Vendor>
+    <URL>http://www.perl-services.de</URL>
+    <Description Lang="de">Verschiebe den Logout-Button nach rechts</Description>
+    <Description Lang="en">Move logout button to the right</Description>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <Filelist>
+        <File Permission="644" Location="Custom/Kernel/Output/HTML/OutputFilterMoveLogoutButton.pm" />
+        <File Permission="644" Location="Kernel/Config/Files/MoveLogoutButton.xml" />
+        <File Permission="644" Location="doc/MoveLogoutButton.json" />
+        <File Permission="644" Location="doc/en/MoveLogoutButton.pod" />
+        <File Permission="644" Location="var/httpd/htdocs/skins/Agent/default/css/PS.MoveLogoutButton.css" />
+    </Filelist>
+</otrs_package>

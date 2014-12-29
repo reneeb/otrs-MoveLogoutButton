@@ -1,0 +1,19 @@
+=head1 NAME
+
+MoveLogoutButton
+
+=head1 DESCRIPTION
+
+In OTRS4 the logout and the preferences button moved to the rest of the toolbar icons ("my locked tickets", ...).
+This can be quite confusing. So this addon moves those two buttons to the right.
+
+=head1 REPOSITORY AND BUGTRACKER
+
+The code repository and a bugtracker is available at
+L<http://github.com/reneeb/otrs-MoveLogoutButton>.
+
+=head1 AUTHOR AND LICENSE
+
+This addon is licensed under the terms of AGPL 3.
+
+Renee Baecker, C<< <info@perl-services.de> >>
