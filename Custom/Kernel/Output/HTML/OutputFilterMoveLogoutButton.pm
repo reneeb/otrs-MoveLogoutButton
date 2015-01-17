@@ -37,7 +37,7 @@ sub Run {
     ${ $Param{Data} } =~ s{(
         <ul \s* id="ToolBar"> .*?
     ) (
-        (?: <li [^>]* > .*? </li> \s* ){2}
+        (?: <li> .*? </li> \s* ){2}
         </ul>
     )}{$1 . "</ul>" . _Infofy( $2 )}exsm;
 
@@ -47,7 +47,7 @@ sub Run {
 sub _Infofy {
     my ($Items) = @_;
 
-    my @Icons = $Items =~ m{<li [^>]* > (.*?) </li>}xmsg;
+    my @Icons = $Items =~ m{<li> (.*?) </li>}xmsg;
 
     sprintf qq~<div id="UserInfo">%s%s</div>~, @Icons;
 }
