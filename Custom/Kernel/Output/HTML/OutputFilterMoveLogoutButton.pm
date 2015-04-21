@@ -14,7 +14,9 @@ use warnings;
 
 use List::Util qw(first);
 
-our $VERSION = 0.01;
+our @ObjectDependencies = qw(
+    Kernel::Config
+);
 
 sub new {
     my ( $Type, %Param ) = @_;
@@ -33,23 +35,34 @@ sub Run {
     return 1 if !$Template;
     return 1 if !$Param{Templates}->{$Template};
 
-    # place the widget in the output (TODO)
+    my $ShowUsername = $Kernel::OM->Get('Kernel::Config')->Get('MoveLogoutButton::ShowUsername');
+
     ${ $Param{Data} } =~ s{(
         <ul \s* id="ToolBar"> .*?
     ) (
         (?: <li> .*? </li> \s* ){2}
         </ul>
-    )}{$1 . "</ul>" . _Infofy( $2 )}exsm;
+    )}{$1 . "</ul>" . _Infofy( $2, $ShowUsername )}exsm;
 
     return ${ $Param{Data} };
 }
 
 sub _Infofy {
-    my ($Items) = @_;
+    my ($Items, $ShowUsername) = @_;
 
     my @Icons = $Items =~ m{<li> (.*?) </li>}xmsg;
 
-    sprintf qq~<div id="UserInfo">%s%s</div>~, @Icons;
+    my $User = '';
+    if ( $ShowUsername ) {
+        ($User) = $Items =~ m{
+            class="LogoutButton" [^>]+
+            title=".*? \s+ \(([^"]+)\)"
+        }xms;
+
+        $User = '<span>' . $User . '</span>';
+    }
+
+    sprintf qq~<div id="UserInfo">%s%s%s</div>~, $User, @Icons;
 }
 
 1;

@@ -26,4 +26,15 @@
             </Array>
         </Setting>
     </ConfigItem>
+    <ConfigItem Name="MoveLogoutButton::ShowUsername" Required="1" Valid="1">
+        <Description Translatable="1">Show user name next to the logout button.</Description>
+        <Group>MoveLogoutButton</Group>
+        <SubGroup>Core</SubGroup>
+        <Setting>
+            <Option SelectedID="0">
+                <Item Key="0">No</Item>
+                <Item Key="1">Yes</Item>
+            </Option>
+        </Setting>
+    </ConfigItem>
 </otrs_config>
