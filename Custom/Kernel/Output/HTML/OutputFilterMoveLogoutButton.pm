@@ -1,6 +1,6 @@
 # --
 # Kernel/Output/HTML/OutputFilterMoveLogoutButton.pm
-# Copyright (C) 2014 Perl-Services.de, http://www.perl-services.de/
+# Copyright (C) 2014 - 2016 Perl-Services.de, http://www.perl-services.de/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -41,8 +41,9 @@ sub Run {
         <ul \s* id="ToolBar"> .*?
     ) (
         (?: <li> .*? </li> \s* ){2}
-        </ul>
-    )}{$1 . "</ul>" . _Infofy( $2, $ShowUsername )}exsm;
+    ) (
+        .*? </ul>
+    )}{$1 . $3 . _Infofy( $2, $ShowUsername )}exsm;
 
     return ${ $Param{Data} };
 }
