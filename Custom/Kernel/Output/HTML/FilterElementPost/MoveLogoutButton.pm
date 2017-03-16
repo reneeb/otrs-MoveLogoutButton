@@ -1,13 +1,12 @@
 # --
-# Kernel/Output/HTML/OutputFilterMoveLogoutButton.pm
-# Copyright (C) 2014 - 2016 Perl-Services.de, http://www.perl-services.de/
+# Copyright (C) 2014 - 2017 Perl-Services.de, http://www.perl-services.de/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
 # did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
-package Kernel::Output::HTML::OutputFilterMoveLogoutButton;
+package Kernel::Output::HTML::FilterElementPost::MoveLogoutButton;
 
 use strict;
 use warnings;
